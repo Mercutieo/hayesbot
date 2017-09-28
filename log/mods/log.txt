@@ -1,0 +1,106 @@
+
+Mer#6879 'Mer': come type here <@137377347757146112>
+Sean#4002 'Sean': dumb
+Sean#4002 'Sean': idiot
+Sean#4002 'Sean': face
+Mer#6879 'Mer': faggot
+Botzilla#7608 'Botzilla': <@!189597563295367171>, that word is not allowed.
+Sean#4002 'Sean': fag
+Botzilla#7608 'Botzilla': <@!137377347757146112>, that word is not allowed.
+Mer#6879 'Mer': 
+Sean#4002 'Sean': 
+Mer#6879 'Mer': 
+Mer#6879 'Mer': 
+Sean#4002 'Sean': 
+Sean#4002 'Sean'@ : -clearchat 10
+Sean#4002 'Sean'@ : -clearchat 10
+Sean#4002 'Sean'@ : -clearchat 10
+Mer#6879 'Mer'@ : lets type some stuff
+Mer#6879 'Mer'@ : to
+Mer#6879 'Mer'@ : get
+Mer#6879 'Mer'@ : some
+Mer#6879 'Mer'@ : more
+Mer#6879 'Mer'@ : lines
+Sean#4002 'Sean'@ : -clearchat 100
+Mer#6879 'Mer'@ : fuck off
+Mer#6879 'Mer'@ : function timeStamp() {
+    var now = new Date();
+    var date = [now.getMonth() + 1, now.getDate(), now.getFullYear()];
+    var time = [now.getHours(), now.getMinutes(), now.getSeconds()];
+    var suffix = (time[0] < 12) ? "AM" : "PM";
+    time[0] = (time[0] < 12) ? time[0] : time[0] - 12;
+    time[0] = time[0] || 12;
+ 
+    for (var i = 1; i < 3; i++) {
+        if (time[i] < 10) {
+            time[i] = "0" + time[i];
+        }
+    }
+Mer#6879 'Mer'@ : 
+Mer#6879 'Mer'@ : ```
+how do you handle this
+o bot o mine
+```
+Mer#6879 'Mer'@ : 
+Sean#4002 'Sean'@ : ```csharp
+        [Command("clearchat"), Aliases("clear", "cc")]
+        public async Task ClearChat(CommandContext context, [RemainingText] string rawIn)
+        {
+            int parsedIn = 0;
+            string channel = context.Channel.Name;
+            try
+            {
+                parsedIn = int.Parse(rawIn);
+                if(parsedIn < 1 || parsedIn > 100)
+                {
+                    await context.RespondAsync($"{context.User.Mention}, the value must be whole number between 1-100");
+                }
+                else
+                {
+                    await context.Guild.GetChannel(362794217669394434).SendMessageAsync(
+                        $":exclamation: " +
+                        $"**{context.Message.Author.Username}#{context.Message.Author.Discriminator}** " +
+                        $"cleared {parsedIn} chat messages in **#{channel}** " +
+                        $"({Times.formatDateTime(DateTime.UtcNow)})");
+
+                    System.Collections.Generic.IReadOnlyList<DiscordMessage> x = await context.Channel.GetMessagesAsync(parsedIn);
+                    await context.Channel.DeleteMessagesAsync(x);
+
+                    Task task = Task.Delay(1000);
+                    await context.Message.DeleteAsync();
+                    await task;
+                }
+            }
+            catch(FormatException e) {
+                await context.RespondAsync($"{context.User.Mention}, the value must be whole number between 1-100");
+            }
+        }
+```
+Mer#6879 'Mer'@ : 
+Sean#4002 'Sean'@ : test
+Sean#4002 'Sean'@ : fag
+Botzilla#7608 'Botzilla'@ : <@!137377347757146112>, that word is not allowed.
+Sean#4002 'Sean'@ : iael;awjd;awdh;w
+Botzilla#7608 'Botzilla'@ : <@!137377347757146112>, that word is not allowed.
+Sean#4002 'Sean'@ : iael;awjd;awdh;w
+Mer#6879 'Mer'@ 2017/09/28:26:11: silly
+Mer#6879 'Mer'@ 09 28 2017 12:SS: slightly less silly
+Mer#6879 'Mer'@ 09 28 2017 12:SS: log
+Sean#4002 'Sean'@ 09 28 2017 12:SS: -clearchat 5
+Mer#6879 'Mer'@ 09/28/2017:12:11: sorry
+Mer#6879 'Mer'@ 09/28/2017:12:14: that word is not allowed
+Sean#4002 'Sean'@ 09/28/2017:12:15: no
+Sean#4002 'Sean'@ 09/28/2017:12:17: idiot
+Sean#4002 'Sean'@ 09/28/2017:12:20: -c 100
+Sean#4002 'Sean'@ 09/28/2017:12:30: -cc 100
+Mer#6879 'Mer'@ 09/28/2017:12:12: what
+Sean#4002 'Sean'@ 09/28/2017:12:42: hi
+Mer#6879 'Mer'@ 09/28/2017:12:50: 
+Sean#4002 'Sean'@ NaNad
+Mer#6879 'Mer'@ NaN
+Mer#6879 'Mer'@ NaN
+Mer#6879 'Mer'@ 8/4/2017 18:46:42: testirno
+Mer#6879 'Mer'@ 8/4/2017 18:46:57: Mer#6879 'Mer'@ 8/4/2017 18:46:42: testirno
+Sean#4002 'Sean'@ 8/4/2017 18:47:15: gay
+Botzilla#7608 'Botzilla'@ 8/4/2017 18:47:15: <@!137377347757146112>, that word is not allowed.
+Mer#6879 'Mer'@ 8/4/2017 18:47:37: @!137377347757146112

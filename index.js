@@ -1,30 +1,53 @@
-	/*
-  A ping pong bot, whenever you send "ping", it replies "pong".
-*/
-
-// Import the discord.js module
 const Discord = require('discord.js');
-
-// Create an instance of a Discord client
 const client = new Discord.Client();
+const config = require("./config.json");
+const token = config.token;
+var fs = require('fs');
+var logFile = "./log/mods/log.txt"
 
-// The token of your bot - https://discordapp.com/developers/applications/me
-const token = 'your bot token here';
+//is the bot on?
+console.log("ready for action captain!")
 
-// The ready event is vital, it means that your bot will only start reacting to information
-// from Discord _after_ ready is emitted
-client.on('ready', () => {
-  console.log('I am ready!');
-});
-
-// Create an event listener for messages
+//listener
 client.on('message', message => {
-  // If the message is "ping"
-  if (message.content === 'ping') {
-    // Send "pong" to the same channel
-    message.channel.send('pong');
-  }
+	//get message info
+  	author = message.author.tag;
+  	nick = message.author.username;
+  	channel = message.channel.name;
+
+
+  	if (channel == "mods"){
+  		fs.readFile(logFile,'utf8',function(err,data){
+  			logging =data + "\r\n" + author + " " +  "'" + nick + "'" + "@ " + timestamp()
+  			 +  ": " + message.content ;
+ 			fs.writeFileSync(logFile,logging);
+  		});
+  	}
+
+
+	
+ 
+
+
+
 });
+	
+
+
 
 // Log our bot in
 client.login(token);
+console.log(timestamp());
+//gen timestamp
+function timestamp() {
+	var d = new Date();
+	var year = d.getFullYear();
+	var month = d.getMonth();
+	var day = d.getDay();
+	var hours = d.getHours() + 6;
+	var mins = d.getMinutes();
+	var secs = d.getSeconds();	
+	time = (month + "/"+day + "/" + year + " " +hours + ":" + mins + ":" + secs);
+	return time;
+}
+
