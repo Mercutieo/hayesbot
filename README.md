@@ -1,6 +1,10 @@
 # hayesbot
-Hayes bot was created to log times in the Offical Godzilla Mendoza Discord
+Hayes bot was created in nodeJS to log messages in the Offical Godzilla Mendoza Discord
 https://discord.gg/hNHxPZu
 
-if you wanna use it, you have to add a config.json with a token 
+#todo:
+Attachment logging
+read when attachments are embeded in a text 
+
+
 <3s
