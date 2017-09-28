@@ -2,6 +2,7 @@
 Hayes bot was created in nodeJS to log messages in the Offical Godzilla Mendoza Discord
 https://discord.gg/hNHxPZu
 
+
 #todo:
 
 Attachment logging
