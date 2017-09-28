@@ -14,9 +14,9 @@ client.on('message', message => {
   	author = message.author.tag;
   	nick = message.author.username;
   	channel = message.channel.name;
+  	var logFile = "./log/" + channel + "/log.txt";
 
-
-  	if (channel == "mods"){
+  	if (channel){
   		fs.readFile(logFile,'utf8',function(err,data){
   			logging =data + "\r\n" + author + " " +  "'" + nick + "'" + "@ " + timestamp()
   			 +  ": " + message.content ;
@@ -24,20 +24,14 @@ client.on('message', message => {
   		});
   	}
 
-
-	
- 
-
-
-
 });
 	
-
 
 
 // Log our bot in
 client.login(token);
 console.log(timestamp());
+
 //gen timestamp
 function timestamp() {
 	var d = new Date();
