@@ -4,6 +4,7 @@ https://discord.gg/hNHxPZu
 
 #todo:
 Attachment logging
+
 read when attachments are embeded in a text 
 
 
