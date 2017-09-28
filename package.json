@@ -1,0 +1,12 @@
+{
+	"name":"hayesbot",
+	"version": "1.0.0",
+	"scripts" : {
+		"start" : "node server.js"
+	},
+	"dependencies": {
+		"express": "4.16.0"
+	},
+	"author" : "David Henderson",
+	"license" : "isc"
+}
