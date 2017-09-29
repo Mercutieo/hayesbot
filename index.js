@@ -38,7 +38,7 @@ function timestamp() {
 	var year = d.getFullYear();
 	var month = d.getMonth();
 	var day = d.getDay();
-	var hours = d.getHours() + 6;
+	var hours = d.getHours();
 	var mins = d.getMinutes();
 	var secs = d.getSeconds();	
 	time = (month + "/"+day + "/" + year + " " +hours + ":" + mins + ":" + secs);
